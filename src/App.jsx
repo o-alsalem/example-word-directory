@@ -63,7 +63,6 @@ export default function App() {
           placeholder="Sök efter definitionen av ett ord."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)} // Uppdaterar inputValue
-          onKeyPress={(e) => e.key === "Enter" && searchDefinition()} // Startar sökning på Enter-tangent
         />
         {/* Knapp för att trigga sökningen */}
         <button className="search-button" onClick={searchDefinition}>
