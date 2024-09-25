@@ -23,7 +23,7 @@ export default function App() {
 
     try {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue.trim()}`
+        `https://api.dictionaryapi.dev/api/v2/entries/sv/${inputValue.trim()}`
       );
 
       if (!response.ok) {
