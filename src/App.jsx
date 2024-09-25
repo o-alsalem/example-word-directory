@@ -23,7 +23,7 @@ export default function App() {
 
     try {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/sv/${inputValue.trim()}`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue.trim()}`
       );
 
       if (!response.ok) {
@@ -63,6 +63,7 @@ export default function App() {
           placeholder="Sök efter definitionen av ett ord."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)} // Uppdaterar inputValue
+
         />
         {/* Knapp för att trigga sökningen */}
         <button className="search-button" onClick={searchDefinition}>
