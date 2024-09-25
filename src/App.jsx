@@ -25,11 +25,6 @@ export default function App() {
       const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue.trim()}`
       );
-
-      if (!response.ok) {
-        throw new Error("Server problem uppstod " + response.statusText);
-      }
-
       const data = await response.json();
 
       // Kontrollera om data innehåller en definition
@@ -63,7 +58,6 @@ export default function App() {
           placeholder="Sök efter definitionen av ett ord."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)} // Uppdaterar inputValue
-
         />
         {/* Knapp för att trigga sökningen */}
         <button className="search-button" onClick={searchDefinition}>
